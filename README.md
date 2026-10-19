@@ -10,7 +10,7 @@ the steps in order.
 Keep this page open while you work. It is the same for everyone, so if a
 colleague describes a screen differently, you are both looking at this.
 
-**Where to find the system.** Open **https://logistics.asoneafrica.org** in
+**Where to find the system.** Open **https://logistics.asoneministries.org** in
 your web browser — Chrome, Edge or Safari. There is nothing to install.
 
 ---
