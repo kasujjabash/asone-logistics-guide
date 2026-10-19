@@ -21,12 +21,12 @@ your web browser — Chrome, Edge or Safari. There is nothing to install.
 |---|---|
 | [Signing in](#signing-in) | Your first time, and your password |
 | [The menu down the left](#the-menu-down-the-left) | What each item is for |
-| [Job 1](#job-1--create-a-production-order) | Create a production order |
-| [Job 1b](#job-1b--import-many-production-orders-from-a-spreadsheet) | Import many orders from a spreadsheet |
-| [Job 2](#job-2--receive-a-delivery-from-a-tailoring-centre) | Receive a delivery |
-| [Job 3](#job-3--when-an-order-arrives-in-two-deliveries) | When an order arrives in two deliveries |
-| [Job 4](#job-4--find-and-print-a-receipt) | Find and print a receipt |
-| [Job 5](#job-5--check-what-a-warehouse-holds) | Check what a warehouse holds |
+| [Creating a production order](#creating-a-production-order) | Telling a Tailoring Centre what to make |
+| [Importing many orders from a spreadsheet](#importing-many-orders-from-a-spreadsheet) | When they already exist on paper |
+| [Receiving a delivery](#receiving-a-delivery) | Counting goods in at the warehouse |
+| [When an order arrives in two deliveries](#when-an-order-arrives-in-two-deliveries) | Part now, the rest later |
+| [Finding and printing a receipt](#finding-and-printing-a-receipt) | A delivery you already recorded |
+| [Checking what a warehouse holds](#checking-what-a-warehouse-holds) | Stock on the shelves |
 | [Words the system uses](#words-the-system-uses) | Plain English for what is on screen |
 | [If something goes wrong](#if-something-goes-wrong) | The red messages, and what to do |
 
@@ -58,7 +58,7 @@ beneath it and are always there.
 If a menu item is not on your screen, your job does not need it. That is
 normal and nothing is wrong.
 
-## Job 1 — Create a production order
+## Creating a production order
 
 This is how you tell a Tailoring Centre what to make and where to send it.
 
@@ -88,7 +88,7 @@ the number to write on paperwork and give to the Tailoring Centre.
 > The grey bar at the bottom says what — usually a garment with no quantity,
 > or no garment chosen.
 
-## Job 1b — Import many production orders from a spreadsheet
+## Importing many orders from a spreadsheet
 
 Use this when orders already exist on paper and there are too many to type —
 the 2027 orders the Tailoring Centres are already working from.
@@ -124,9 +124,9 @@ warehouse and date must be the same on all of them.
 **Imported orders show as *Awaiting delivery*.** That is correct — the
 system works out delivery from receipts, and an imported order has none
 yet. If the garments already arrived before the system went live, record
-those deliveries with **Job 2** and the status corrects itself.
+those deliveries the ordinary way and the status corrects itself.
 
-## Job 2 — Receive a delivery from a Tailoring Centre
+## Receiving a delivery
 
 Do this when a vehicle arrives and the garments have been counted. You need
 the **paper packing list** the driver brings.
@@ -180,10 +180,10 @@ Both red ones mean your count and the driver's paper disagree. Settle it with
 him before he leaves — that is what the **Reconciliation Notes** box on the
 right is for, and anyone opening the receipt later will read what you wrote.
 
-## Job 3 — When an order arrives in two deliveries
+## When an order arrives in two deliveries
 
 A centre may send 60 garments this week and the other 40 next week. That is
-normal. Record each delivery on its own: do **Job 2** again, with two things
+normal. Record each delivery on its own, exactly as above, with two things
 to watch.
 
 - Choose the **same production order**. The system remembers what already
@@ -197,7 +197,7 @@ to watch.
 > 40 outstanding because 40 are still being made. A shortage is different:
 > fewer arrived than the paper said were sent.
 
-## Job 4 — Find and print a receipt
+## Finding and printing a receipt
 
 1. Click **Receipts** in the menu on the left. Newest first.
 2. Narrow the list with **Tailoring Centre** or **Status** at the top.
@@ -208,7 +208,7 @@ to watch.
 To find a delivery when you only know the order, open **Production Orders**,
 click the order, and its deliveries are listed on its page.
 
-## Job 5 — Check what a warehouse holds
+## Checking what a warehouse holds
 
 1. Click **Inventory** in the menu on the left.
 2. Each row is one garment in one warehouse. **Available** is what is free
