@@ -10,6 +10,12 @@ the steps in order.
 Keep this page open while you work. It is the same for everyone, so if a
 colleague describes a screen differently, you are both looking at this.
 
+**Looking for more than the steps?**
+[How the system works](how-the-system-works.md) explains the thinking behind
+the screens — how stock is counted, where prices come from, what a SKU is,
+why a shortage and a part delivery are different things. Read it when you
+want to understand the system rather than get a task done.
+
 **Where to find the system.** Open **https://logistics.asoneministries.org** in
 your web browser — Chrome, Edge or Safari. There is nothing to install.
 
