@@ -192,7 +192,7 @@ cannot collide.
 | `WT-` | Warehouse transfer | `WT-5001` |
 | `ADJ-` | Inventory adjustment | `ADJ-9001` |
 | `TX-` | Stock ledger transaction | `TX-1000001` |
-| `UNI-` | SKU | `UNI-NUR-CHS-XS-CHK` |
+| `UNI-` | SKU | `UNI-PS-CHS-XS` |
 | `KIT-` | Uniform kit | `KIT-NUR-B-DAY-XS` |
 
 **The order number and the invoice number are the same number.** The school
@@ -209,48 +209,53 @@ deleted.
 
 Three things that sound similar and are not.
 
-**A garment** is a kind of clothing — "Checked Shirt", "Sweater". It carries
-the colour, the class band it is cut for, and the price.
+**An item** is a kind of clothing — "Checked Shirt", "Grey Shorts". It
+carries the price list it appears on and the price. It used to carry a
+colour and a class band as well; AsOne dropped both in October 2026, and
+the colour is in the name anyway — "Grey Shorts".
 
 **A size** is XS, S, M, L, XL or XXL. Socks and neckties are **OS**, one
 size, which fits any kit. Sizes are maintained under **Settings → Sizes**,
 where the sort order matters more than it looks: sizes do not sort as text,
 and alphabetically L lands between XS and M.
 
-**A SKU** is a garment in a size. It is what gets counted, ordered and
+**A SKU** is an item in a size. It is what gets counted, ordered and
 picked, and it is the only one of the three that appears in the warehouse.
 
-A SKU number is made of five parts:
+A SKU number is made of four parts:
 
 ```
-UNI - NUR - CHS - XS - CHK
- |     |     |     |    └── colour code
- |     |     |     └─────── size
- |     |     └───────────── item code
- |     └─────────────────── class band
- └───────────────────────── always UNI
+UNI - PS - CHS - XS
+ |     |     |    └── size
+ |     |     └─────── item code
+ |     └───────────── price list
+ └─────────────────── always UNI
 ```
 
-Reading `UNI-NUR-CHS-XS-CHK` tells you it is a Nursery checked shirt in XS
+Reading `UNI-PS-CHS-XS` tells you it is a Primary checked shirt in XS
 without looking anything up. The number is **assigned once and never
 changes**, because it is printed on shelf labels and pick lists.
 
-### Class bands
+### The price list in the number
 
-A garment is cut for one band. The band is finer than "Primary" or "High
-School", and it matters because a P1–P4 sweater and a P5–P7 sweater are two
-different garments.
+| Code | Means |
+|---|---|
+| `PS` | Primary |
+| `HS` | High School |
+| `ALL` | Both lists — socks, neckties |
 
-| Code | Band | Price list |
-|---|---|---|
-| `NUR` | Nursery | Primary |
-| `P14` | Lower Primary (P1–P4) | Primary |
-| `P57` | Upper Primary (P5–P7) | Primary |
-| `S14` | O Level (S1–S4) | High School |
-| `S56` | A Level (S5–S6) | High School |
-| `ALL` | Everything — socks, neckties | Both |
+It is there so that items of the same name on the two lists stay apart:
+`UNI-PS-SWT-XS` and `UNI-HS-SWT-XS` are different sweaters, priced
+separately.
 
-**There is one SKU per garment and size.** Trying to add a second is refused,
+> **Numbers changed in October 2026.** They used to carry a class band and a
+> colour — `UNI-NUR-CHS-XS-CHK`. When AsOne dropped both, items that differed
+> only by band became one item, and their stock, orders and receipts were
+> added together under the surviving number. Nothing was lost; the totals are
+> the same. Old numbers on paper printed before then will not match the
+> screen — look the item up by name.
+
+**There is one SKU per item and size.** Trying to add a second is refused,
 naming the one that already exists. Two rows for the same shirt in the same
 size would split its stock across two numbers and neither would show the true
 quantity.
@@ -407,7 +412,7 @@ order still says 1,000. What moves is the comparison on its screen:
 
 ```
 Requirement vs Ordered
-UNI-S14-BSK-XS-BLK   requested 1,000   ordered 200   −800
+UNI-HS-BSK-XS   requested 1,000   ordered 200   −800
 ```
 
 So the original requirement survives as a record, with progress beside it.
@@ -594,7 +599,7 @@ Posting a correction:
 5. Add a note saying where it was found, who counted it, which shelf.
 
 Before you post, the screen states plainly what will happen: *"posting this
-will reduce available inventory for UNI-S14-BPT-XS-BLK by 63 units at
+will reduce available inventory for UNI-HS-BPT-XS by 63 units at
 Namayemba, immediately and permanently. Available becomes 7, and the change
 is worth UGX 63,000."*
 

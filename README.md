@@ -231,7 +231,7 @@ properly matters.
 | Word on screen | What it means |
 |---|---|
 | **Production Order** | An instruction to one Tailoring Centre to make garments for one warehouse. Numbered PO-100024. |
-| **SKU** | One exact garment: the item, its size and its colour together. A white shirt size XS is a different SKU from size S. |
+| **SKU** | One exact item in one size. A white shirt size XS is a different SKU from size S. |
 | **Ordered** | How many were asked for. |
 | **Received** | How many you counted in. |
 | **Outstanding** | Ordered, less what has arrived. What is still owed. |
