@@ -33,6 +33,10 @@ your web browser — Chrome, Edge or Safari. There is nothing to install.
 | [When an order arrives in two deliveries](#when-an-order-arrives-in-two-deliveries) | Part now, the rest later |
 | [Finding and printing a receipt](#finding-and-printing-a-receipt) | A delivery you already recorded |
 | [Checking what a warehouse holds](#checking-what-a-warehouse-holds) | Stock on the shelves |
+| [Correcting a stock figure](#correcting-a-stock-figure) | After a physical count |
+| [Damages, losses and returns](#damages-losses-and-returns) | Stock that left, or came back |
+| [Moving stock between warehouses](#moving-stock-between-warehouses) | Namayemba to Serere |
+| [What the adjustments cost](#what-the-adjustments-cost) | The money side, for Finance |
 | [Words the system uses](#words-the-system-uses) | Plain English for what is on screen |
 | [If something goes wrong](#if-something-goes-wrong) | The red messages, and what to do |
 
@@ -226,10 +230,89 @@ The figures are worked out from every delivery and every issue recorded.
 Nobody types a stock figure in by hand, which is why recording receipts
 properly matters.
 
+## Correcting a stock figure
+
+Use this after counting a shelf and finding the system is wrong.
+
+1. Click **Inv. Adjustments** in the menu, then **New Adjustment**.
+2. Choose **Inventory Correction**.
+3. Choose the **warehouse** and the **item**.
+4. Type the number you actually counted into **Counted**.
+5. Click **Post Adjustment**.
+
+**You do not work out the difference.** The system compares your count with
+what it was holding and records the difference itself. That is the whole
+point — the person on the shelf counts, and nobody does arithmetic that can
+go wrong.
+
+You also do not choose a reason. The system picks "count higher" or "count
+lower" to match what it found.
+
+> To correct many items at once, use **Import stock count** on the Inventory
+> screen instead. Same result, one file.
+
+## Damages, losses and returns
+
+Three different things, one form.
+
+1. Click **Inv. Adjustments**, then **New Adjustment**.
+2. Choose the one that happened:
+   - **Damaged** — torn, stained, no longer sellable.
+   - **Pick Up/Loss** — gone, and nobody knows where.
+   - **Return** — a school sent it back and it can be sold again.
+3. Choose the **warehouse** and the **item**.
+4. Type **how many**. Never type a minus sign — choosing "Damaged" is what
+   tells the system stock is leaving.
+5. Choose the **reason**, write what happened in **Notes**, and click
+   **Post Adjustment**.
+
+**Write a real note.** "Two torn in the bale" is worth having a year later;
+"damaged" is not. The note is all an auditor will have.
+
+## Moving stock between warehouses
+
+1. Click **Inv. Adjustments**, then **New Adjustment**.
+2. Choose **Warehouse Transfer**.
+3. Choose the **item**, the **source warehouse** and the **destination**.
+4. Type **how many**, then click **Post Transfer**.
+
+The system records stock leaving one site and arriving at the other, so the
+two figures always agree and no stock is created or lost in between.
+
+It will refuse to move more than the source actually holds, and it will
+refuse to move stock to the warehouse it is already in.
+
+## What the adjustments cost
+
+For Finance and the leads.
+
+1. Click **Reports**, then **Adjustment Costs**.
+2. Set **From** and **To** for the period you want, and a **warehouse** if
+   you want just one.
+3. Click **Export CSV** to open it in Excel.
+
+One row per reason: how many were posted, how many units, and what they were
+worth.
+
+**A positive total is not a profit.** The figures are signed — damages and
+losses are negative because stock left, returns and upward corrections are
+positive because stock came back. A period where counting found more than
+expected totals positive, and that means the count was wrong, not that money
+was made.
+
+The **Treatment** line says "Not yet classified". The system knows what the
+stock was worth; it does not yet know which accounting treatment AsOne wants
+for each reason. That is a decision still to be made.
+
+
 ## Words the system uses
 
 | Word on screen | What it means |
 |---|---|
+| Adjustment | A correction to a stock figure, with a reason attached |
+| Reason code | Why stock moved — Damaged, Return, count higher, count lower |
+| Transfer | Stock moved from one warehouse to another |
+| Post | Save it to the record. A posted entry cannot be deleted |
 | **Production Order** | An instruction to one Tailoring Centre to make garments for one warehouse. Numbered PO-100024. |
 | **SKU** | One exact item in one size. A white shirt size XS is a different SKU from size S. |
 | **Ordered** | How many were asked for. |

@@ -611,8 +611,16 @@ opposite entry.
 **Use the notes box.** It is the only place the reason *behind* the reason
 code is recorded, and it is what an auditor reads a year from now.
 
-The other kinds of adjustment are **Return**, **Pick Up/Loss**, **Damaged**
-and **Warehouse Transfer**, each with its own reason code and direction.
+The other kinds of adjustment are **Return**, **Pick Up/Loss** and
+**Damaged**, each with its own reason code and direction. **Nobody types a
+minus sign** — the reason code decides whether a count adds or removes, so
+whoever posts gives a quantity and nothing else.
+
+**Warehouse Transfer** sits on the same form but is not an adjustment. It
+writes **two ledger rows**, one out of the source and one into the
+destination, so the two sites always agree and no stock is created in
+between. It is refused if the source does not hold enough — naming the item
+and what it actually has — and refused if the two warehouses are the same.
 
 ---
 
@@ -755,9 +763,21 @@ Reports are grouped by what they answer.
 | **Inventory** | What is on the shelf, by SKU and warehouse, with value |
 | **Procurement costs** | What has been committed to the Tailoring Centres, by group order and production order |
 | **Price list** | The current Primary and High School price lists, including kits |
+| **Adjustment costs** | What corrections, damages, losses and returns did to the value of stock, by reason |
 
 The price list is the one report that matters before anything has moved: it
 is what a school is quoted from, and it is pure master data.
+
+**Adjustment costs is signed.** Damages and losses are negative because
+stock left; returns and upward corrections are positive because it came
+back. So the rows sum to the net effect on the value of stock, and a period
+where counting found more than expected totals positive — the count was
+wrong, not the stock. Transfers are deliberately absent: moving stock
+between two warehouses changes its value by nothing.
+
+Its **Treatment** line reads "Not yet classified". The system knows what the
+stock was worth; which accounting treatment each reason gets is a decision
+AsOne has still to make.
 
 ---
 
