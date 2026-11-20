@@ -16,6 +16,12 @@ the screens — how stock is counted, where prices come from, what a SKU is,
 why a shortage and a part delivery are different things. Read it when you
 want to understand the system rather than get a task done.
 
+**Testing Phase 3?**
+[Phase 3: what to test, and what you should see](phase-3-testing.md) walks
+through ordering, paying, picking, packing, despatch and backorders, with the
+steps to try and what should happen at each one. It is written for testing,
+not for daily use.
+
 **Where to find the system.** Open **https://logistics.asoneministries.org** in
 your web browser — Chrome, Edge or Safari. There is nothing to install.
 
