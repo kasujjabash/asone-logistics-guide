@@ -185,26 +185,29 @@ Switch to **Warehouse Staff** for everything in this section.
 The warehouse only ever sees orders for its own site. If you can see another
 warehouse's order here, that is a failure worth reporting immediately.
 
-### F38. The pick list, the sheet you carry to the shelf
+### F38. The pick list: built, and switched off for now
 
-**Who:** Warehouse Staff.
+**Nothing to test here.** Turned off at your request on 20 November 2026.
 
 | Step | What you should see |
 |---|---|
-| 1. Open the order from the backlog. | The order screen, with the printing buttons. |
-| 2. Click **Print Pick List**. | A sheet headed **Pick List** with the order number. |
-| 3. Read the strip under the heading. | Student, School, Pick From and Order Date. Nothing about a van or a carrier, because none of it has happened yet. |
-| 4. Find a garment that appears both inside a kit and on its own. | It is **one** line with the total, not two lines. |
-| 5. Look at the right-hand column. | An empty box per row, to tick with a pen. |
-| 6. Look at the foot. | One signature rule, **Picked by**, and the totals. |
+| 1. Open a released order as Warehouse Staff. | **Print Invoice** and **Print Packing List**. No **Print Pick List**. |
 
-The lines are sorted by garment, not in the order the school typed them, so
-the same garment is always together on the sheet. Walking the same aisle
-twice is the thing step 4 exists to prevent.
+Only the button is hidden. The sheet itself, and everything behind it, is
+built and in place, so turning it back on is one line and no rebuild of the
+feature. If you want it back during testing, say so.
 
-If the sorting does not match the way your shelves are actually laid out,
-tell us. We can sort by anything the system records, but it does not yet
-record a shelf or bin location.
+What it does, for when that decision comes back around. It is the sheet a
+clerk carries to the shelf: the garments and quantities with a box to tick
+per line, the student and the warehouse at the top, one signature rule for
+**Picked by**, and nothing about a van or a carrier, because none of that
+has happened yet. A garment that appears both inside a kit and on its own
+is one line with the total, so nobody walks the same aisle twice.
+
+It exists as a second document because a packing list printed before
+despatch has nothing to put in half its fields, which is the wrong sheet to
+hand somebody walking to a shelf. With it hidden, the packing list is doing
+both jobs, and F40 step 5 is what that costs.
 
 ### F39. Picking reserves the stock
 
@@ -251,9 +254,12 @@ Step 2 is the one to be fussy about. This is the fault reported on
 Print the packing list for every order on a consolidated van and check each
 one names a single child.
 
-Steps 5 and 7 are why the pick list is a separate sheet. A packing list
-printed before despatch has nothing to put in half its fields, which is the
-wrong document to hand somebody walking to a shelf. F38 is that document.
+Steps 5 and 7 are why the pick list was built as a separate sheet. With it
+switched off, this is the only sheet available before despatch, so a clerk
+picking from it is reading a document that says **Not yet shipped** and
+**Not yet assigned** and carries a consignee block and two signature rules
+for a parcel that does not exist yet. That is workable, and it is worth
+knowing it is the trade being made. See F38.
 
 ### F41. Despatch, and the school confirming the parcel
 
@@ -470,5 +476,5 @@ raising it rather than deciding it.
 | **Cancelled** | Withdrawn before payment. The record stays. |
 | **Backorder** | A paid order its warehouse cannot fill. Not a record, a situation. |
 | **Transfer** | Handing an order to a warehouse that has the stock. No stock moves. |
-| **Pick list** | The sheet you carry to the shelf. |
+| **Pick list** | The sheet you carry to the shelf. Built, switched off for now. |
 | **Packing list** | The sheet that travels with the parcel. |
